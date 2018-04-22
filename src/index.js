@@ -1,7 +1,9 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-
-import App from './App';
+import { render } from 'react-dom';
+import { Provider } from 'react-redux';
+import { ConnectedRouter } from 'react-router-redux';
+import store, { history } from './store';
+import App from './containers/app';
 
 import 'spectre.css/dist/spectre.min.css';
 import 'spectre.css/dist/spectre-exp.min.css';
@@ -9,4 +11,13 @@ import 'spectre.css/dist/spectre-icons.min.css';
 
 import './index.css';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const target = document.querySelector('#root');
+
+render(
+  <Provider store={store}>
+    <ConnectedRouter history={history}>
+      <App />
+    </ConnectedRouter>
+  </Provider>,
+  target
+);
