@@ -17,43 +17,43 @@ const Home = props => (
     </div>
 
     <div className="columns">
-      <div className="column">
+      <div className="column col-md-12">
         <button
-          className="btn"
+          className="btn btn-link"
           onClick={props.increment}
           disabled={props.isIncrementing}
         >
           Increment
         </button>
       </div>
-      <div className="column">
+      <div className="column col-md-12">
         <button
-          className="btn"
+          className="btn btn-link"
           onClick={props.incrementAsync}
           disabled={props.isIncrementing}
         >
           Increment Async
         </button>
       </div>
-      <div className="column">
+      <div className="column col-md-12">
         <button
-          className="btn"
+          className="btn btn-link"
           onClick={props.decrement}
           disabled={props.isDecrementing}
         >
-          Decrementing
+          Decrement
         </button>
       </div>
-      <div className="column">
+      <div className="column col-md-12">
         <button
-          className="btn"
+          className="btn btn-link"
           onClick={props.decrementAsync}
           disabled={props.isDecrementing}
         >
           Decrement Async
         </button>
       </div>
-      <div className="column">
+      <div className="column col-xs-12">
         <button className="btn btn-link" onClick={() => props.changePage()}>
           Go to about page via redux
         </button>
