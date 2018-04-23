@@ -1,8 +1,7 @@
 import React from 'react';
 
 export default () => (
-  <div>
-    <h1>About Us</h1>
-    <p>Hello Medium!</p>
+  <div className="container">
+    <h3 className="s-title">About Us</h3>
   </div>
 );

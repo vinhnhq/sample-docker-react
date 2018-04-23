@@ -10,33 +10,55 @@ import {
 } from '../../modules/counter';
 
 const Home = props => (
-  <div>
-    <h1>Home</h1>
-    <p>Count: {props.count}</p>
+  <div className="container">
+    <h3 className="s-title">Home</h3>
+    <div className="docs-note">
+      <p>Count: {props.count}</p>
+    </div>
 
-    <p>
-      <button onClick={props.increment} disabled={props.isIncrementing}>
-        Increment
-      </button>
-      <button onClick={props.incrementAsync} disabled={props.isIncrementing}>
-        Increment Async
-      </button>
-    </p>
-
-    <p>
-      <button onClick={props.decrement} disabled={props.isDecrementing}>
-        Decrementing
-      </button>
-      <button onClick={props.decrementAsync} disabled={props.isDecrementing}>
-        Decrement Async
-      </button>
-    </p>
-
-    <p>
-      <button onClick={() => props.changePage()}>
-        Go to about page via redux
-      </button>
-    </p>
+    <div className="columns">
+      <div className="column">
+        <button
+          className="btn"
+          onClick={props.increment}
+          disabled={props.isIncrementing}
+        >
+          Increment
+        </button>
+      </div>
+      <div className="column">
+        <button
+          className="btn"
+          onClick={props.incrementAsync}
+          disabled={props.isIncrementing}
+        >
+          Increment Async
+        </button>
+      </div>
+      <div className="column">
+        <button
+          className="btn"
+          onClick={props.decrement}
+          disabled={props.isDecrementing}
+        >
+          Decrementing
+        </button>
+      </div>
+      <div className="column">
+        <button
+          className="btn"
+          onClick={props.decrementAsync}
+          disabled={props.isDecrementing}
+        >
+          Decrement Async
+        </button>
+      </div>
+      <div className="column">
+        <button className="btn btn-link" onClick={() => props.changePage()}>
+          Go to about page via redux
+        </button>
+      </div>
+    </div>
   </div>
 );
 

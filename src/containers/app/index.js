@@ -4,11 +4,16 @@ import Home from '../home';
 import About from '../about';
 
 const App = () => (
-  <div>
-    <header>
-      <Link to="/">Home</Link>
-      <hr />
-      <Link to="/about-us">About</Link>
+  <div className="container grid-lg">
+    <header className="navbar">
+      <section className="navbar-section">
+        <Link className="btn btn-link" to="/">
+          Home
+        </Link>
+        <Link className="btn btn-link" to="/about-us">
+          About
+        </Link>
+      </section>
     </header>
 
     <main>
